@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eatogo</title>
+    <!-- Semantic UI CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.0/dist/semantic.min.css">
+    <!-- Customized CSS -->
+    <link rel="stylesheet" href="../../static/css/main.css">
+</head>
+
+<body class="custom-shade">
+
+    <!-- Navbar -->
+    <nav class="ui attached segment custom-navbar-fade custom-font-thin custom-font-spaced custom-opacity-mini">
+        <div class="ui container">
+            <div class="ui secondary stackable menu">
+                <h2 class="ui header item">
+                    <img class="ui image" src="../../static/images/logo.png">
+                </h2>
+                <div class="mobile-item item custom-mobile-hide">
+                    <a class="ui header text-warning" href="../../index.html">首頁</a>
+                </div>
+                <div class="mobile-item item custom-mobile-hide">
+                    <a class="ui header text-warning" href="../../about.html">關於我們</a>
+                </div>
+                <div class="mobile-item item custom-mobile-hide">
+                    <a class="ui header text-warning" href="../../contact.html">聯絡我們</a>
+                </div>
+                <div class="mobile-item item custom-mobile-hide">
+                    <a class="ui header text-warning" href="../../store/home.html">管理頁面</a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="ui menu toggle icon button outline-warning custom-collapse-navbar-button">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="ui container custom-font-spaced main custom-padded-bottom-medium">
+        <!-- Introduction -->
+        <div class="ui center aligned vertical segment">
+            <h1 class="text-white custom-font-thin">店家資訊</h1>
+            <p class="text-warning custom-font-thin">米其林星星都是從這些基本開始的唷&excl;</p>
+        </div>
+        <hr class="my-5">
+        <!-- Main Body -->
+        <div class="ui centered stackable grid">
+            <div class="four wide column"></div>
+            <!-- Left Body -->
+            <div class="six wide column">
+                <form class="ui form">
+                    <!-- 基本資料 -->
+                    <h1 class="divided header text-white custom-font-thin">基本資料</h1>
+                    <div class="ui divider"></div>
+                    <div class="field twelve column">
+                        <label class="text-warning">店鋪名稱</label>
+                        <input type="text" name="storeName" id="storeName" placeholder="您的店鋪名稱">
+                    </div>
+                    <div class="field twelve column">
+                        <label class="text-warning">店鋪地址</label>
+                        <input type="text" name="storeAddress" id="storeAddress" placeholder="店鋪地址">
+                    </div>
+                    <div class="field twelve column">
+                        <label class="text-warning">店鋪電話</label>
+                        <input type="tel" name="storePhone" id="storePhone" placeholder="02-11223344">
+                    </div>
+                    <div class="field twelve column">
+                        <label class="text-warning">電子郵件信箱</label>
+                        <input type="email" name="storeEmail" id="storeEmail" placeholder="example@mail.com">
+                    </div>
+                    <div class="field twelve column">
+                        <label class="text-warning">營業時間</label>
+                        <input type="text" name="storeOpenHour" id="storeOpenHour" placeholder="AM 11:00 - PM 21:00">
+                    </div>
+                    <div class="field twelve column">
+                        <label class="text-warning">店舖簡介</label>
+                        <textarea name="storeIntro" id="storeIntro" placeholder="請簡單描述您的店舖" rows="5"></textarea>
+                    </div>
+                    <!-- 基本資料 End -->
+                    <!-- 營業設定 -->
+                    <h1 class="divided header text-white custom-font-thin">營業設定</h1>
+                    <div class="ui divider"></div>
+                    <!-- <div class="field column">
+                        <label class="text-warning">店舖地區</label>
+                        <div id="twzipcode" class="inline fields"></div>
+                    </div> -->
+                    <div class="field column">
+                        <label class="text-warning">營業模式</label>
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="storeOperateType">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">營業模式</div>
+                            <div class="menu">
+                                <div class="item" data-value="wholeday">全日營業型 AM11&colon;00&dash;PM2&colon;00 PM5&colon;00&dash;PM9&colon;00</div>
+                                <div class="item" data-value="noon">中午營業型 AM11&colon;00&dash;PM2&colon;00</div>
+                                <div class="item" data-value="evening">晚間營業型 PM5&colon;00&dash;PM9&colon;00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 營業設定 End -->
+                </form>
+            </div>
+            <!-- Left Body End -->
+            <!-- Right Body -->
+            <div class="four wide column">
+                <h1 class="text-white custom-font-thin">店舖圖片</h1>
+                <div class="ui divider"></div>
+                <form action="" method="POST" class="center aligned">
+                    <div class="field center aligned">
+                        <img class="ui small rounded image" src="../../static/images/store_5.png">
+                    </div>
+                    <div class="field" id="fileInput">
+                        <label for="file" class="ui icon button warning custom-font-thin">
+                            <i class="file icon"></i> 開啟檔案</label>
+                        <input type="file" id="file" hidden>
+                    </div>
+                </form>
+            </div>
+            <!-- Right Body End -->
+            <div class="two wide column"></div>
+        </div>
+        <hr class="my-5">
+        <!-- Confirmation Section -->
+        <div class="ui padded center aligned grid">
+            <div class="item">
+                <button type="submit" id="submitButton" class="large ui button warning">確定修改</button>
+            </div>
+            <div class="right item">
+                <button type="submit" id="closeStoreButton" class="large ui red button custom-font-thin">關閉店舖</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="ui vertical segment custom-footer-padding custom-footer-fade custom-font-spaced custom-font-thin custom-opacity-mini one-page">
+        <div class="ui center aligned container">
+            <div class="ui three column stackable grid">
+                <div class="row">
+                    <div class="column">
+                        <p class="ui header text-warning">地址</p>
+                        <p class="text-white">台北市忠孝東路三段1號</p>
+                    </div>
+                    <div class="column">
+                        <p class="ui header text-warning">電話</p>
+                        <p class="text-white">&lpar;02&rpar;&nbsp;2771&ndash;2171</p>
+                    </div>
+                    <div class="column">
+                        <p class="ui header text-warning">Email</p>
+                        <p class="text-white">contact&commat;eatogo&period;com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ui section divider"></div>
+            <p class="text-white">&copy; 2018 Eatogo 版權所有</p>
+        </div>
+    </footer>
+
+    <!-- Semantic UI JS with jQuery JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.0/dist/semantic.min.js"></script>
+    <!-- Navbar JS -->
+    <script src="../../static/js/navbar.js"></script>
+    <!-- Common Initialization JS -->
+    <script src="../../static/js/common.js"></script>
+    <!-- Info JS -->
+    <script src="../../static/js/storeInfo.js"></script>
+</body>
+
+</html>

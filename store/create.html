@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eatogo</title>
+    <!-- Semantic UI CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.0/dist/semantic.min.css">
+    <!-- Customized CSS -->
+    <link rel="stylesheet" href="../static/css/main.css">
+</head>
+
+<body class="custom-shade">
+
+    <!-- Navbar -->
+    <nav class="ui attached segment custom-navbar-fade custom-font-thin custom-font-spaced custom-opacity-mini">
+        <div class="ui container">
+            <div class="ui secondary stackable menu">
+                <h2 class="ui header item">
+                    <img class="ui image" src="../static/images/logo.png">
+                </h2>
+                <div class="mobile-item item custom-mobile-hide">
+                    <a class="ui header text-warning" href="../index.html">首頁</a>
+                </div>
+                <div class="mobile-item item custom-mobile-hide">
+                    <a class="ui header text-warning" href="../about.html">關於我們</a>
+                </div>
+                <div class="mobile-item item custom-mobile-hide">
+                    <a class="ui header text-warning" href="../contact.html">聯絡我們</a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="ui menu toggle icon button outline-warning custom-collapse-navbar-button">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="ui container custom-font-spaced main custom-padded-bottom-medium">
+        <!-- Introduction -->
+        <div class="ui center aligned vertical segment">
+            <h1 class="text-white custom-font-thin">建立店舖</h1>
+            <p class="text-warning custom-font-thin">為了防止世界被破壞，為了守護世界的和平，貫徹愛與真實的邪惡</p>
+        </div>
+        <hr class="my-5">
+        <div class="ui centered grid">
+            <div class="eight wide column">
+                <form class="ui form">
+                    <div class="field">
+                        <label for="storeName" class="text-warning">店鋪名稱</label>
+                        <input type="text" name="storeName" id="storeName" placeholder="店名" class="custom-font-thin">
+                    </div>
+                    <div class="field">
+                        <label for="storeAddress" class="text-warning">店鋪地址</label>
+                        <input type="text" name="storeAddress" id="storeAddress" placeholder="天龍國讓德爾區中央路1號" class="custom-font-thin">
+                    </div>
+                    <div class="field">
+                        <label for="storePhone" class="text-warning">聯絡電話</label>
+                        <input type="tel" name="storePhone" id="storePhone" placeholder="店舖的聯絡電話" class="custom-font-thin">
+                    </div>
+                    <div class="field">
+                        <label for="storeEmail" class="text-warning">電子信箱</label>
+                        <input type="email" name="storeEmail" id="storeEmail" placeholder="example@store.com" class="custom-font-thin">
+                    </div>
+                    <div class="field">
+                        <label for="storeOpenHour" class="text-warning">營業時間</label>
+                        <input type="text" name="storeOpenHour" id="storeOpenHour" placeholder="AM 11:00 - PM 21:00" class="custom-font-thin">
+                    </div>
+                    <div class="field">
+                        <label for="storeArea" class="text-warning">店舖地區</label>
+                        <div id="twzipcode" class="inline fields"></div>
+                    </div>
+                    <div class="field">
+                        <label for="storeOperateType" class="text-warning">營業模式</label>
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="storeOperateType">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">營業模式</div>
+                            <div class="menu">
+                                <div class="item" data-value="wholeday">全日營業型 AM11&colon;00&dash;PM2&colon;00 PM5&colon;00&dash;PM9&colon;00</div>
+                                <div class="item" data-value="noon">中午營業型 AM11&colon;00&dash;PM2&colon;00</div>
+                                <div class="item" data-value="evening">晚間營業型 PM5&colon;00&dash;PM9&colon;00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="storeIntro" class="text-warning">店舖簡介</label>
+                        <textarea name="storeIntro" id="storeIntro" rows="3"></textarea>
+                    </div>
+                    <div class="field">
+                        <p class="text-warning">店鋪照片</p>
+                        <label for="storeLogo" class="ui icon button custom-font-thin">
+                            <i class="file icon"></i> 美照
+                        </label>
+                        <input type="file" name="storeLogo" id="storeLogo" style="display: none">
+                    </div>
+                    <div class="field">
+                        <button id="createStoreButton" class="large ui button warning" type="submit">確認</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="ui vertical segment custom-footer-padding custom-footer-fade custom-font-spaced custom-font-thin custom-opacity-mini one-page">
+        <div class="ui center aligned container">
+            <div class="ui three column stackable grid">
+                <div class="row">
+                    <div class="column">
+                        <p class="ui header text-warning">地址</p>
+                        <p class="text-white">台北市忠孝東路三段1號</p>
+                    </div>
+                    <div class="column">
+                        <p class="ui header text-warning">電話</p>
+                        <p class="text-white">&lpar;02&rpar;&nbsp;2771&ndash;2171</p>
+                    </div>
+                    <div class="column">
+                        <p class="ui header text-warning">Email</p>
+                        <p class="text-white">contact&commat;eatogo&period;com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ui section divider"></div>
+            <p class="text-white">&copy; 2018 Eatogo 版權所有</p>
+        </div>
+    </footer>
+
+    <!-- Semantic UI JS with jQuery JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.0/dist/semantic.min.js"></script>
+    <!-- TWzipcode JS -->
+    <script src="../static/js/jquery.twzipcode-1.7.14.min.js"></script>
+    <!-- Navbar JS -->
+    <script src="../static/js/navbar.js"></script>
+    <!-- Common Initialization JS -->
+    <script src="../static/js/common.js"></script>
+    <!-- Create JS -->
+    <script src="../static/js/createStore.js"></script>
+</body>
+
+</html>

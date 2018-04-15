@@ -1,0 +1,216 @@
+/*---------- Global settings ----------*/
+body {
+	min-width: 412px !important;
+}
+textarea {
+	resize: none !important;
+	overflow: auto;
+}
+.custom-padded-bottom-medium {
+	padding-bottom: 2rem !important;
+}
+
+/*---------- Global Fonts settings ----------*/
+.custom-font-thin {
+	font-weight: 100 !important;
+}
+.custom-font-spaced {
+	letter-spacing: 0.1rem !important;
+}
+.custom-opacity-mini {
+	opacity: 0.8 !important;
+}
+
+/*---------- Background Image with shade ----------*/
+.custom-shade {
+	position: relative;
+	background: -webkit-radial-gradient(center, circle cover, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), url(../images/background.jpg);
+	background-image: -webkit-radial-gradient(center center, circle cover, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), url(../images/background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+@media screen and (max-width: 767px) {
+	.custom-shade {
+		position: relative;
+		background: -webkit-radial-gradient(center, circle cover, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), url(../images/background_767px.jpg);
+		background-image: -webkit-radial-gradient(center center, circle cover, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), url(../images/background_767px.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+}
+
+/*---------- Navbar with gradient effect ----------*/
+nav {
+	z-index: 1000;
+}
+.ui.attached.segment {
+	bottom: auto !important;
+	position: fixed !important;
+}
+.custom-navbar-fade {
+	background: linear-gradient(to bottom, #343a40 0%, rgba(0, 0, 0, 0) 100%) !important;
+	border: none !important;
+}
+a.ui.button.outline-warning {
+	color: #f0ad4e !important;
+	background-image: none !important;
+	background-color: transparent !important;
+	border: 1px solid #f0ad4e !important;
+	font-size: 1.14285714rem !important;
+	font-weight: 100 !important;
+}
+a.ui.button.outline-warning:hover {
+	background: #F7C244 !important;
+	color: black !important;
+}
+.custom-collapse-navbar-button {
+	position: absolute !important;
+	top: 28% !important;
+	right: 5% !important;
+}
+.custom-collapse-navbar-button-top {
+	top: 11.3% !important;
+}
+a.ui.menu.toggle {
+	display: none !important;
+}
+@media screen and (max-width: 767px) {
+	.custom-mobile-hide {
+		display: none !important;
+	}
+	a.ui.menu.toggle {
+		display: block !important;
+	}
+}
+
+/*---------- Footer with gradient effect ----------*/
+.custom-footer-fade {
+	background: linear-gradient(to top, #343a40 0%, rgba(0, 0, 0, 0) 100%) !important;
+}
+.custom-footer-padding {
+	padding-bottom: 3rem !important;
+}
+footer.ui.segment {
+	bottom: 0 !important;
+	width: 100% !important;
+	margin-bottom: 0 !important;
+}
+footer.one-page {
+	position: fixed !important;
+}
+@media screen and (max-width: 767px) {
+	footer.ui.segment {
+		position: relative !important;
+	}
+}
+
+/*---------- Landing Page Jumbotron ----------*/
+p.ui.header.display-4 {
+	margin-bottom: 1rem !important;
+}
+.ui.button.warning {
+	color: #fff !important;
+	background-color: #f0ad4e !important;
+	border-color: #f0ad4e !important;
+	font-weight: 100 !important;
+}
+.ui.button.warning:hover {
+	color: #fff !important;
+	background-color: #ec971f !important;
+	border-color: #eb9316 !important;
+}
+
+/*---------- Main body container ----------*/
+.ui.main.container {
+	padding-top: 120px !important;
+	padding-bottom: 190px !important;
+}
+@media screen and (max-width: 767px) {
+	.main.landing {
+		text-align: center !important;
+	}
+	.city.menu.field {
+		margin-right: 0 !important;
+	}
+}
+.submitButton {
+	color: #fff !important;
+	background-color: #f0ad4e !important;
+	border-color: #f0ad4e !important;
+	font-weight: 100 !important;
+}
+.submitButton:hover {
+	color: #fff !important;
+	background-color: #ec971f !important;
+	border-color: #eb9316 !important;
+}
+.ui[class*="center aligned"].grid>.column {
+	text-align: left !important;
+}
+.ui.form .inline.fields .field {
+	padding: .62em 1em !important;
+	margin-bottom: 1em !important;
+}
+.city.menu.field {
+	margin-right: 1em;
+}
+#fileInput {
+	margin-top: 2rem !important;
+}
+.ui.tabular.menu .active.item {
+	color: #f0ad4e !important;
+}
+
+/*--------- Semantic UI error message ----------*/
+.ui.form .field .prompt.label {
+	background-color: #db2828 !important;
+	color: #fff !important;
+	font-weight: 100 !important;
+}
+
+/*---------- Bootstrap Color theme ----------*/
+.text-warning {
+	color: #f0ad4e !important;
+	font-weight: 100 !important;
+}
+.text-white {
+	color: snow !important;
+	font-weight: 100 !important;
+}
+.display-1 {
+    font-size: 6rem !important;
+    line-height: 1.1 !important;
+}
+.display-2 {
+    font-size: 5.5rem !important;
+    line-height: 1.1 !important;
+}
+.display-3 {
+    font-size: 4.5rem !important;
+    line-height: 1.1 !important;
+}
+.display-4 {
+    font-size: 3.5rem !important;
+    line-height: 1.2 !important;
+}
+.font-weight-light {
+    font-weight: 300 !important;
+}
+.my-5 {
+	margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+.jumbotron {
+	background: transparent !important;
+	padding: 2rem 1rem !important;
+    margin-bottom: 2rem !important;
+    border-radius: .3rem !important;
+}
+@media (min-width: 576px){
+	.jumbotron {
+		padding: 4rem 2rem !important;
+	}
+
+}
